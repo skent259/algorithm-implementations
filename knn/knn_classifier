@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $# -ne 3 ]]; then 
+    echo "usage: $0 <INT k> <TRAINING SET> <TEST SET>" 1>&2 # write error message to stderr (below)
+    exit 0
+fi
+
+python_to_execute="Python/knn_classifier.py"
+python ${python_to_execute} $1 $2 $3

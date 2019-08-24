@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $# -ne 5 ]]; then 
+    echo "usage: $0 <learing-rate> <#hidden-units> <#epochs> <train-set-file> <test-set-file>" 1>&2 # write error message to stderr (below)
+    exit 0
+fi
+
+python_to_execute="Python/nnet.py"
+python ${python_to_execute} $1 $2 $3 $4 $5

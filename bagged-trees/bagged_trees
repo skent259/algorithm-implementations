@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $# -ne 4 ]]; then 
+    echo "usage: $0 <#trees> <max depth> <train-set-file> <test-set-file>" 1>&2 # write error message to stderr (below)
+    exit 0
+fi
+
+python_to_execute="Python/bagged_trees.py"
+python ${python_to_execute} $1 $2 $3 $4 
